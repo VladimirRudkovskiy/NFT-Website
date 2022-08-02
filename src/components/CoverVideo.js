@@ -11,6 +11,7 @@ video{
 	height: auto;
 }
 `
+
 const CoverVideo = () => {
 	return (
 		<VideoContainer>
