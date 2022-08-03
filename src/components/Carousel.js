@@ -43,9 +43,30 @@ height: 70vh;
 .swiper-button-next{
 	color: ${props => props.theme.text};
 	right: 0;
-
+	width: 4rem;
+	top: 60%;
 	background-image: url(${Arrow});
 	background-position: center;
+	background-size: cover;
+
+	&:after{
+		display:none;
+	}
+}
+
+.swiper-button-prev{
+	color: ${props => props.theme.text};
+	left: 0;
+	top: 60%;
+	width: 4rem;
+	transform: rotate(180deg);
+	background-image: url(${Arrow});
+	background-position: center;
+	background-size: cover;
+
+	&:after{
+		display:none;
+	}
 }
 `
 const Carousel = () => {
