@@ -80,7 +80,7 @@ const DrawSvg = () => {
 		})
 
 		return () => {
-			
+			if(t1) t1.kill();
 		};
 	}, [])
 
