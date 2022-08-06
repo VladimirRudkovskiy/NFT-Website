@@ -17,7 +17,7 @@ const Logo = () => {
 	return (
 		<LogoText>
 			<Link to="/">
-				Q.
+				V.
 			</Link>
 		</LogoText>
 	)

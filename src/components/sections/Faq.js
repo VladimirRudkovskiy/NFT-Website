@@ -62,7 +62,7 @@ useLayoutEffect(() => {
 	})
 
 	return() => {
-
+		ScrollTrigger.kill();
 	};
 }, [])
 
