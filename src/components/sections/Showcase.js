@@ -29,7 +29,7 @@ position: relative;
 }
 
 &>*:last-child{
-	animation-duration: 15s;
+	animation-duration: 20s;
 }
 `
 
