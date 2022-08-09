@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from 'react';
 import styled from "styled-components";
+import {useWindowScroll} from 'react-use';
 
 
 const Up = styled.div`
@@ -13,11 +14,11 @@ background-color: ${props => props.theme.body};
 
 font-size: ${props => props.theme.fontxl};
 position: fixed;
-right: 1 rem;
-bottom: 1 rem;
+right: 1rem;
+bottom: 1rem;
 
 cursor: pointer;
-display: flex;
+display: none;
 justify-content: center;
 align-items: center;
 
@@ -33,22 +34,34 @@ transition: all 0.2s ease;
 
 const ScrollToTop = () => {
 
-	const scrollToTop = (id) =>{
-		let element = document.getElementById("home");
+	const ref = useRef(null);
+	const {y} = useWindowScroll();
+
+	const scrollToTop = () => {
+		let element = document.getElementById("navigation");
 	
 		element.scrollIntoView({
 			behavior: 'smooth',
 			block: 'start',
 			inline: 'nearest'
-		});
-	};
-	
+		})
+	}
+
+	useLayoutEffect(() => {
+		if(y > 200){
+			ref.current.style.display = "flex"
+		}else{
+			ref.current.style.display = "none"
+		}
+	}, [y])
+
+
 
 	return (
-		<Up onClick={() => scrollToTop()}>
+		<Up ref={ref} onClick={() => scrollToTop()}>
 			&#x2191;
 		</Up>
-	);
-};
+	)
+}
 
 export default ScrollToTop

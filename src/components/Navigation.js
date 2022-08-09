@@ -58,7 +58,7 @@ const scrollTo =(id) =>{
 }
 
 	return (
-		<Section>
+		<Section id="navigation">
 			<NavBar>
 				<Logo />
 				<Menu>
