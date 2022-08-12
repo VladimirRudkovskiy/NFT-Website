@@ -19,6 +19,19 @@ margin: 0 auto;
 display: flex;
 justify-content: center;
 align-items: center;
+
+@media (max-width: 64em) {
+	width: 85%;
+}
+
+@media (max-width: 48em) {
+	flex-direction: column-reverse;
+	width: 100%;
+	&>*:first-child{
+		width: 100%;
+		margin-top: 2rem;
+	}
+}
 `
 
 const Box = styled.div`
@@ -59,12 +72,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 border-radius: 50%;
-
 position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-
 background-color: ${props => props.theme.text};
 color: ${props => props.theme.body};
 font-size: ${props => props.theme.fontxl};

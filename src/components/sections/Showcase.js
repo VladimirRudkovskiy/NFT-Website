@@ -26,10 +26,18 @@ position: relative;
 
 &>*:first-child{
 	animation-duration: 20s;
+
+	@media (max-width: 30em){
+		animation-duration: 15s;
+	}
 }
 
 &>*:last-child{
 	animation-duration: 20s;
+
+	@media (max-width: 30em){
+		animation-duration: 15s;
+	}
 }
 `
 
@@ -56,6 +64,14 @@ background-color: ${props => props.theme.body};
 
 border-radius: 20px;
 cursor: pointer;
+
+@media (max-width: 48em){
+	width: 12rem;
+}
+
+@media (max-width: 30em){
+	width: 10rem;
+}
 
 img{
 	width: 100%;
@@ -84,6 +100,10 @@ h1{
 	font-size: ${props => props.theme.fontmd};
 	color: ${props => props.theme.body};
 	font-weight: 600;
+
+	@media (max-width: 30em){
+		font-size: ${props => props.theme.fontsm};
+	}
 }
 `
 

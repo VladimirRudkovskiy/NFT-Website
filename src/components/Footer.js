@@ -27,6 +27,14 @@ justify-content: space-between;
 align-items: center;
 
 border-bottom: 1px solid ${(props) => props.theme.text};
+
+@media (max-width: 48em){
+width: 90%;
+
+h1{
+	font-size: ${props => props.theme.fontxxxl};
+}
+}
 `
 
 const Left = styled.div`
@@ -34,6 +42,10 @@ display: flex;
 flex-direction:column;
 justify-content: center;
 align-items: center;
+
+@media (max-width: 48em){
+	width: 100%;
+	}
 `
 
 const IconList = styled.div`
@@ -58,6 +70,10 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(3, 1fr);
 grid-gap: 1rem;
+
+@media (max-width: 48em){
+	display: none;
+	}
 `
 
 const Item = styled.li`
@@ -88,6 +104,15 @@ align-items: center;
 a{
 	text-decoration: underline;
 }
+
+@media (max-width: 48em){
+	width: 100%;
+	flex-direction: column;
+
+	span{
+		margin-bottom: 1rem;
+	}
+	}
 `
 
 const Footer = () => {

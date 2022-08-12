@@ -10,6 +10,10 @@ video{
 	width: 100%;
 	height: auto;
 }
+
+@media (max-width: 64em) {
+	min-width: 40vh;
+}
 `
 
 const CoverVideo = () => {

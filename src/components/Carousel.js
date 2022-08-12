@@ -25,6 +25,25 @@ const Container = styled.div`
 width: 25vw;
 height: 70vh;
 
+@media (max-width: 70em){
+	height: 60vh;
+}
+
+@media (max-width: 64em){
+	height: 50vh;
+	width: 30vw;
+}
+
+@media (max-width: 48em){
+	height: 50vh;
+	width: 40vw;
+}
+
+@media (max-width: 30em){
+	height: 45vh;
+	width: 60vw;
+}
+
 .swiper{
 	width: 100%;
 	height: 100%;
@@ -52,6 +71,14 @@ height: 70vh;
 	&:after{
 		display:none;
 	}
+
+	@media (max-width: 64em){
+		width: 3rem;
+	}
+
+	@media (max-width: 30em){
+		width: 2rem;
+	}
 }
 
 .swiper-button-prev{
@@ -66,6 +93,14 @@ height: 70vh;
 
 	&:after{
 		display:none;
+	}
+
+	@media (max-width: 64em){
+		width: 3rem;
+	}
+
+	@media (max-width: 30em){
+		width: 2rem;
 	}
 }
 `
